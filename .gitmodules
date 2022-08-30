@@ -1,0 +1,6 @@
+[submodule "QuakeViewer/Dependencies/NuakeRenderer"]
+	path = QuakeViewer/Dependencies/NuakeRenderer
+	url = https://github.com/antopilo/NuakeRenderer.git
+[submodule "QuakeViewer/Vendors/QuakeBSPParser"]
+	path = QuakeViewer/Vendors/QuakeBSPParser
+	url = https://github.com/antopilo/QuakeBSPParser.git

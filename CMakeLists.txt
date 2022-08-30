@@ -1,0 +1,4 @@
+cmake_minimum_required(VERSION 3.1...3.24)
+project(QuakeViewer VERSION 1.0 LANGUAGES CXX)
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+add_subdirectory(QuakeViewer)
