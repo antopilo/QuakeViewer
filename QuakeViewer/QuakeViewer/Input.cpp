@@ -1,13 +1,24 @@
 #include "Input.h"
 #include <GLFW/glfw3.h>
 
+GLFWwindow* Input::_window;
+
 std::map<int, bool> Input::m_Keys = std::map<int, bool>();
 bool Input::m_MouseButtons[5] = { false, false, false, false, false };
-GLFWwindow* Input::_window;
+
+float Input::XScroll = 0.0f;
+float Input::YScroll = 0.0f;
 
 void Input::SetWindow(GLFWwindow* window)
 {
 	_window = window;
+	glfwSetScrollCallback(_window, Input::ScrollCallback);
+}
+
+void Input::ScrollCallback(GLFWwindow* window, double xoffset, double yoffset)
+{
+	XScroll = (float)xoffset;
+	YScroll = (float)yoffset;
 }
 
 // Only true if the key is currently being pressed
@@ -89,8 +100,6 @@ bool Input::IsMouseButtonDown(int button)
 bool Input::IsMouseButtonPressed(int button)
 {
 	auto state = glfwGetMouseButton(_window, button);
-
-	
 
 	return false;
 }

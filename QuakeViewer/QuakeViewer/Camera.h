@@ -13,6 +13,7 @@ public:
 	Vector3 _right = Vector3(1, 0, 0);
 	Vector3 _forward = Vector3(0, 0, 1);
 
+	float _fov = 90.0f;
 	float _yaw = 0.0f;
 	float _pitch = 0.0f;;
 	bool _controlled = true;
@@ -31,7 +32,7 @@ public:
 	Matrix4& GetProjection()  
 	{ 
 		
-		_projection = glm::perspectiveFov(glm::radians(90.0f), 9.0f * _ratio, 9.0f, 0.001f, 1000.0f);
+		_projection = glm::perspectiveFov(glm::radians(_fov), 9.0f * _ratio, 9.0f, 0.001f, 1000.0f);
 		return _projection; 
 	}
 

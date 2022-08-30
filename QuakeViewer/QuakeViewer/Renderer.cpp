@@ -104,5 +104,6 @@ void Renderer::DrawCube()
     glDrawArrays(GL_TRIANGLES, 0, 6);
 
     _vertexArray->Bind();
-    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_LINES, 36, GL_UNSIGNED_INT, 0);
 }
+

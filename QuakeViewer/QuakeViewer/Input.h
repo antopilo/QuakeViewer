@@ -10,7 +10,11 @@ private:
 	static bool m_MouseButtons[5];
 	static std::map<int, bool> m_Keys;
 	static GLFWwindow* _window;
+	
 public:
+
+	static float YScroll;
+	static float XScroll;
 	static void SetWindow(GLFWwindow* window);
 	static bool IsKeyPressed(int keycode);
 	static bool IsKeyDown(int keycode);
@@ -27,4 +31,6 @@ public:
 	static float GetMouseX();
 	static float GetMouseY();
 	static Vector2 GetMousePosition();
+
+	static void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset);
 };
