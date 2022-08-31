@@ -37,7 +37,6 @@ void Camera::Update(float ts)
 	else
 		Input::HideMouse();
 
-
 	if (Input::IsKeyDown(GLFW_KEY_LEFT_ALT))
 	{
 		if (Input::YScroll != 0)
@@ -83,7 +82,6 @@ void Camera::Update(float ts)
 
 			_translation += Vector3(movement);
 
-
 			if (firstMouse)
 			{
 				mouseLastX = x;
@@ -118,12 +116,11 @@ void Camera::Update(float ts)
 		else if (Input::IsMouseButtonDown(2))
 		{
 			float deltaX = x - mouseLastX;
-			movement += _right * (deltaX * ts);
-
 			float deltaY = y - mouseLastY;
+			movement += _right * (deltaX * ts);
 			movement += _up * (deltaY * ts);
-
 			_translation += Vector3(movement) * 5.0f;
+
 			mouseLastX = x;
 			mouseLastY = y;
 			_controlled = true;

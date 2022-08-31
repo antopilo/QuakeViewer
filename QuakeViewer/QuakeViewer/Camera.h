@@ -32,7 +32,7 @@ public:
 	Matrix4& GetProjection()  
 	{ 
 		
-		_projection = glm::perspectiveFov(glm::radians(_fov), 9.0f * _ratio, 9.0f, 0.001f, 1000.0f);
+		_projection = glm::perspectiveFov(glm::radians(_fov), 9.0f * _ratio, 9.0f, 0.001f, 100000.0f);
 		return _projection; 
 	}
 

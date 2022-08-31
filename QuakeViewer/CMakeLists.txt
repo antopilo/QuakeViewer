@@ -1,7 +1,9 @@
 add_subdirectory(Dependencies/NuakeRenderer)
 
-set(HEADERS QuakeViewer/Camera.h  QuakeViewer/Renderer.h QuakeViewer/Input.h QuakeViewer/FileSystem.h)
-set(SOURCES main.cpp QuakeViewer/Camera.cpp QuakeViewer/Renderer.cpp QuakeViewer/Input.cpp)
+set(HEADERS QuakeViewer/Camera.h  QuakeViewer/Renderer.h QuakeViewer/Input.h QuakeViewer/FileSystem.h 
+QuakeViewer/Vertex.h QuakeViewer/Mesh.h)
+set(SOURCES main.cpp QuakeViewer/Camera.cpp QuakeViewer/Renderer.cpp QuakeViewer/Input.cpp 
+QuakeViewer/Mesh.cpp)
 
 add_executable(QuakeViewer ${HEADERS} ${SOURCES})
 set_property(TARGET QuakeViewer PROPERTY CXX_STANDARD 20)
